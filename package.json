@@ -10,9 +10,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "typegen": "next typegen",
     "typecheck": "tsc --noEmit",
     "lint": "eslint app components lib next.config.mjs eslint.config.mjs --max-warnings=0",
-    "verify": "pnpm lint && pnpm typecheck && pnpm build"
+    "verify": "pnpm typegen && pnpm lint && pnpm typecheck && pnpm build"
   },
   "dependencies": {
     "lucide-react": "0.468.0",
