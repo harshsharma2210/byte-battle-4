@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { siteBasePath } from "@/lib/site-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   },
   description: "A mobile-first sales lead management CRM for field agents.",
   icons: {
-    icon: "/ai-assistant-icon.png",
+    icon: `${siteBasePath}/ai-assistant-icon.png`,
   },
 };
 

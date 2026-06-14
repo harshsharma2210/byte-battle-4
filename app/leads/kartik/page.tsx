@@ -19,6 +19,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AIAssistant } from "@/components/AIAssistant";
 import { leadDetail } from "@/lib/dummy-data";
+import { siteBasePath } from "@/lib/site-config";
 
 export default function LeadDetailPage() {
   const [completedSiteVisit, setCompletedSiteVisit] = useState<{
@@ -289,7 +290,7 @@ export default function LeadDetailPage() {
             <div className="after-call-body">
               <div className={`after-call-ai ${voiceFilling ? "listening" : ""}`}>
                 <button type="button" aria-label="Use SalesAI voice" onClick={fillFollowUpWithVoice}>
-                  <Image src="/ai-assistant-icon.png" alt="" aria-hidden="true" width={46} height={46} />
+                  <Image src={`${siteBasePath}/ai-assistant-icon.png`} alt="" aria-hidden="true" width={46} height={46} />
                 </button>
                 <div>
                   <strong>{voiceFilling ? "Listening..." : "SalesAI voice fill"}</strong>

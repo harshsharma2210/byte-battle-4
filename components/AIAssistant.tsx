@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { siteBasePath } from "@/lib/site-config";
 
 type AssistantContext =
   | {
@@ -182,7 +183,7 @@ export function AIAssistant({ context, onActionComplete }: Props) {
         aria-label="Open AI assistant"
         onClick={openAssistant}
       >
-        <Image src="/ai-assistant-icon.png" alt="" aria-hidden="true" width={56} height={56} />
+        <Image src={`${siteBasePath}/ai-assistant-icon.png`} alt="" aria-hidden="true" width={56} height={56} />
       </button>
 
       {open && (
@@ -191,7 +192,7 @@ export function AIAssistant({ context, onActionComplete }: Props) {
           <section className="ai-sheet">
             <header className="ai-header">
               <span className="ai-avatar">
-                <Image src="/ai-assistant-icon.png" alt="" aria-hidden="true" width={42} height={42} />
+                <Image src={`${siteBasePath}/ai-assistant-icon.png`} alt="" aria-hidden="true" width={42} height={42} />
               </span>
               <div>
                 <h2>AI Assistant</h2>

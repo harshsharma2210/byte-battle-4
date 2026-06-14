@@ -24,6 +24,14 @@ pnpm verify
 
 The verification command runs linting, TypeScript checks, and a production Next.js build.
 
+## GitHub Pages
+
+```bash
+pnpm build:pages
+```
+
+The Pages workflow exports the app as static files with the `/byte-battle-4` base path and deploys the `out` directory.
+
 ## Vercel
 
 Vercel should auto-detect Next.js. Use:

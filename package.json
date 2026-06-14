@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "GITHUB_PAGES=true NEXT_PUBLIC_BASE_PATH=/byte-battle-4 next build && touch out/.nojekyll",
     "start": "next start",
     "typegen": "next typegen",
     "typecheck": "tsc --noEmit",
